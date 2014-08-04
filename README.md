@@ -5,19 +5,20 @@
 ### How to use the Drupal QA Checklist
 
 The following will help in your use of the QA Checklist.
-Information
+
+### Information
 
 This module was written for Drupal site builders, developers, and System administrators or anyone else in charge of launching a Drupal site. The tasks within represent a comprehensive list of things to review and tasks to perform before going live. If you need help, or this list doesn't make any sense to you, we suggest hiring a Drupal development shop like [WebOzy](http://webozy.com/) or others listed in the [Marketplace](https://www.drupal.org/drupal-services).
 
 ### A bit about checklists
 
-Each time you open the QAChecklist, it will look to see if any tasks have already been completed. You still need to click "Save" to time and date stamp the automatically-checked items.
+Each time you open the QA Checklist, it will look to see if any tasks have already been completed. You still need to click "Save" to time and date stamp the automatically-checked items.
 
 The tasks here are designed to be done sequentially, from top to bottom.
 
 ### Don’t do it all
 
-Not every task in this list needs to, or even should, be done. Some of this will rely on your web host or PAAS provider. Using a Drupal-optimized provider such as Pantheon means that much of this list is already completed. Sit back and enjoy some iced tea. For standard web hosts, you may want to ask about the availability of certain features.
+Not every task in this list needs to, or even should, be done. Some of this will rely on your web host or PAAS provider. Using a Drupal-optimized provider such as [Pantheon](https://www.getpantheon.com/) or [Acquia](http://www.acquia.com/products-services/acquia-cloud) means that much of this list is already completed. Sit back and enjoy some iced tea. For standard web hosts, you may want to ask about the availability of certain features.
 
 ### Credits
 
@@ -34,7 +35,7 @@ The Drupal QA Checklist was created by [Nicholas Garofalo (Eidolon Night)](https
 Your first task! Gook luck!
 
 - Deploy code to live server
-    - This checklist is meant to be performed on your live environment.
+    - This checklist is meant to be performed on your live environment. Doing otherwise may result in SEO penalties, future development pain, messed up analytics, and more.
 
 ## Other checklists (optional)
 These are other checklists that would be good to complete.
@@ -44,23 +45,20 @@ These are other checklists that would be good to complete.
     - https://www.drupal.org/project/security_review
 - SEO Checklist
     - Add some modules to help with SEO best practices.
-    - PROJECT LINK
+    - https://www.drupal.org/project/seo_checklist
 - Site Audit
     - Drupal static site analysis platform that generates reports with actionable best practice recommendations.
-    - PROJECT LINK
+    - https://www.drupal.org/project/site_audit
 - Performance and scalability checklist
     - A checklist of some performance and scalability best practices.
-    - PROJECT LINK
+    - https://www.drupal.org/project/pasc
 
 ## Backups
 A good backup strategy prevents you from having a really bad day.
 
 - Install Backup and Migrate
     - This will help with your database backups if your host/PAAS doesn't do it for you.
-    - PROJECT LINK
-- Install Backup and Migrate Files
-    - This addon helps backs up for files if your host/PAAS doesn't do it for you.
-    - PROJECT LINK
+    - https://www.drupal.org/project/backup_migrate
 - Configure Backup and Migrate settings
     - Schedule these as frequently as you need, but remember that for large sites a scheduled backup can bring everything down.
     - PROJECT LINK
@@ -74,6 +72,11 @@ You want to make sure that your site keeps performing well, these steps help you
     - Keep your database clean and running smoothly. Note: You db server needs to be running a few days to get useful results.
     - PROJECT LINK
 - Run DB Maintenance
+    - CONFIGURE LINK
+- Install OptimizeDB
+    - Keep your database clean and running smoothly. Note: You db server needs to be running a few days to get useful results.
+    - https://www.drupal.org/project/optimizedb
+- Run OptimizeDB
     - CONFIGURE LINK
 
 ## Linux
@@ -194,8 +197,8 @@ Users are your biggest threat. Let's review a few settings.
     - Review the text and instructions of the welcome and verification emails.
     - USER SETTINGS LINK
 - Install filter permissions module
-    - 
     - DESCRIPTION
+    - https://www.drupal.org/project/filter_perms
 - Read managing…
     - DESCRIPTION
 - Review and revise user permissions
@@ -229,7 +232,8 @@ The following tasks that cleanup our tools, settings, logs, etc. that are perfor
 - Change Drupal, MySQL, and SSH passowrds
     - DESCRIPTION
 - Set up site emailing
-    - Recommendaed: Mandrill module
+    - Recommended: Mandrill module
+        - https://www.drupal.org/project/mandrill
 
 ## Front-end review
 These tasks ensure that the end-user has a pleasurable experience on-site.
@@ -240,7 +244,10 @@ These tasks ensure that the end-user has a pleasurable experience on-site.
     - DESCRIPTION 
 - Run pingdom tools check
     - http://tools.pingdom.com/  
-Site launch
+
+## Site launch
+Now you're ready to launch.
+
 - Set up HTTP redirect in settings.php for www or non-www
     - DESCRIPTION
 - Point DNS and/or CDN to new live server
