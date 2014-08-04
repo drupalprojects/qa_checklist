@@ -57,6 +57,7 @@ function qa_checklist_checklistapi_checklist_info() {
     'deploy' => array(
       '#title' => t('Deployment'),
       '#description' => t('<p>This checklist is meant to be performed on your live environment.</p>'),
+      
       'deploy_code' => array(
         '#title' => t('Deploy code to live server'),
       ),
@@ -65,7 +66,8 @@ function qa_checklist_checklistapi_checklist_info() {
     // Other checklists
     'other_checklists' => array(
       '#title' => t('Other checklists'),
-      '#description' => t('<p>Install and complete other Drupal checklists.</p>'),
+      '#description' => t('<p>These are other checklists that would be good to complete.</p>'),
+      
       'install_security_review_module' => array(
         '#title' => t('Security Review'),
         '#default_value' => module_exists('security_review'),
@@ -89,7 +91,8 @@ function qa_checklist_checklistapi_checklist_info() {
     // Backups
     'backups' => array(
       '#title' => t('Backups'),
-      '#description' => t('<p>Other important Drupal modules.</p>'),
+      '#description' => t('<p>A good backup strategy prevents you from having a really bad day.</p>'),
+      
       'install_backup_migrate_module' => array(
         '#title' => t('Backup and Migrate'),
         '#default_value' => module_exists('backup_migrate'),
@@ -113,7 +116,8 @@ function qa_checklist_checklistapi_checklist_info() {
     // Maintenance
     'maintenance' => array(
       '#title' => t('Maintenance'),
-      '#description' => t('<p>Other important Drupal modules.</p>'),
+      '#description' => t('<p>You want to make sure that your site keeps performing well, these steps help you do just that.</p>'),
+      
       'install_db_maintenance_module' => array(
         '#title' => t('DB Maintenance'),
         '#default_value' => module_exists('db_maintenance'),
@@ -128,7 +132,8 @@ function qa_checklist_checklistapi_checklist_info() {
     // Linux optimization
     'linux_optimization' => array(
       '#title' => t('Linux optimization'),
-      '#description' => t('<p>Make sure your server is running Drupal the best it can.</p>'),
+      '#description' => t('<p>Some changes to how your OS behaves can help with resource usage and ensure that you get the most out of your server.</p>'),
+      
       'review_web_server_config' => array(
         '#title' => t('Review web server configuration.'),
         '#description' => t('For Apache, check max clients settings and enabled modules.'),
@@ -138,7 +143,7 @@ function qa_checklist_checklistapi_checklist_info() {
     // Web server optimization
     'web_server_optimization' => array(
       '#title' => t('Web server optimization'),
-      '#description' => t('<p>Make sure your server is running Drupal the best it can.</p>'),
+      '#description' => t('<p>No matter which web server technology you use, the default settings simply won\'t do.</p>'),
       'review_web_server_config' => array(
         '#title' => t('Review web server configuration.'),
         '#description' => t('For Apache, check max clients settings and enabled modules.'),
@@ -148,7 +153,7 @@ function qa_checklist_checklistapi_checklist_info() {
     // Database optimization
     'database_optimization' => array(
       '#title' => t('Database optimization'),
-      '#description' => t('<p>Make sure your server is running Drupal the best it can.</p>'),
+      '#description' => t('<p>The database is Drupal\'s backend, so let\'s treat her well.</p>'),
       'review_web_server_config' => array(
         '#title' => t('Review web server configuration.'),
         '#description' => t('For Apache, check max clients settings and enabled modules.'),
@@ -158,7 +163,8 @@ function qa_checklist_checklistapi_checklist_info() {
     // Memcached optimization
     'memcached_optimization' => array(
       '#title' => t('Memcached optimization (optional)'),
-      '#description' => t('<p>Make sure your server is running Drupal the best it can.</p>'),
+      '#description' => t('<p>Memcached is a great cache option that is especially useful for sites with a high number of authenticated users.</p>'),
+      
       'review_web_server_config' => array(
         '#title' => t('Review web server configuration.'),
         '#description' => t('For Apache, check max clients settings and enabled modules.'),
@@ -168,7 +174,8 @@ function qa_checklist_checklistapi_checklist_info() {
     // PHP optimization
     'php_optimization' => array(
       '#title' => t('PHP optimization'),
-      '#description' => t('<p>Make sure your server is running Drupal the best it can.</p>'),
+      '#description' => t('<p>A few changes to your PHP config can provide major performance enhancements.</p>'),
+      
       'review_web_server_config' => array(
         '#title' => t('Review web server configuration.'),
         '#description' => t('For Apache, check max clients settings and enabled modules.'),
@@ -178,7 +185,8 @@ function qa_checklist_checklistapi_checklist_info() {
     // Reverse proxy setup
     'reverse_proxy_setup' => array(
       '#title' => t('Reverse proxy setup (optional)'),
-      '#description' => t('<p>Make sure your server is running Drupal the best it can.</p>'),
+      '#description' => t('<p>Reverse proxies cache your site\'s static content and can be configured to serve entire pages to anonymous user.</p>'),
+      
       'review_web_server_config' => array(
         '#title' => t('Review web server configuration.'),
         '#description' => t('For Apache, check max clients settings and enabled modules.'),
@@ -188,7 +196,8 @@ function qa_checklist_checklistapi_checklist_info() {
     // CDN setup
     'cdn_setup' => array(
       '#title' => t('CDN setup (optional)'),
-      '#description' => t('<p>Make sure your server is running Drupal the best it can.</p>'),
+      '#description' => t('<p>A CDN can decrease resource usage and give your site a major performance boost.</p>'),
+      
       'review_web_server_config' => array(
         '#title' => t('Review web server configuration.'),
         '#description' => t('For Apache, check max clients settings and enabled modules.'),
@@ -198,7 +207,8 @@ function qa_checklist_checklistapi_checklist_info() {
     // Drupal optimization
     'drupal_optimization' => array(
       '#title' => t('Drupal optimization'),
-      '#description' => t('<p>Configure Drupal to run at top speed.</p>'),
+      '#description' => t('<p>Drupal has a few settings that enable caching.</p>'),
+      
       'enable_drupal_caching' => array(
         '#title' => t('Enable caching.'),
         '#default_value' => variable_get('cache', FALSE) && variable_get('block_cache', FALSE),
@@ -220,7 +230,8 @@ function qa_checklist_checklistapi_checklist_info() {
     // User management
     'user_management' => array(
       '#title' => t('User management'),
-      '#description' => t('<p>Review user settings.</p>'),
+      '#description' => t('<p>Users are your biggest threat. Let\'s review a few settings.</p>'),
+      
       'set_admin_role' => array(
         '#title' => t('Set administrator role.'),
         'account_settings' => array(
@@ -266,7 +277,8 @@ function qa_checklist_checklistapi_checklist_info() {
     // Logging
     'logging' => array(
       '#title' => t('Logs'),
-      '#description' => t('<p>A few tasks to remember:</p>'),
+      '#description' => t('<p>Logs can be the first indicator for issues that will get much worse when you launch.</p>'),
+      
       'check_drupal_logs' => array(
         '#title' => t('Check Drupal logs for issues.'),
         '#description' => t('Make sure Database logging (dblog) module is enabled.'),
@@ -288,7 +300,8 @@ function qa_checklist_checklistapi_checklist_info() {
     // Cleanup
     'cleanup' => array(
       '#title' => t('Cleanup'),
-      '#description' => t('<p>A few things to do before deployment:</p>'),
+      '#description' => t('<p>The following tasks that cleanup our tools, settings, logs, etc. that are performance killers and/or security risks.</p>'),
+      
       'disable_devel_modules' => array(
         '#title' => t('Disable devel modules.'),
       ),
@@ -325,16 +338,18 @@ function qa_checklist_checklistapi_checklist_info() {
     ),
     
     // Front-end review
-    'launch' => array(
+    'fron_end_review' => array(
       'set_up_cron_job' => array(
-        '#title' => t('Set up cron job.'),
+        '#title' => t('Front-end review'),
+        '#description' => t('<p>These tasks ensure that the end-user has a pleasurable experience on-site.</p>'),
       ),
     ),
     
     // Launch
     'launch' => array(
       '#title' => t('Site launch'),
-      '#description' => t('<p>Tasks to be done when launching the site.</p>'),
+      '#description' => t('<p>Now you're ready to launch.</p>'),
+      
       'set_up_settings_php_redirect' => array(
         '#title' => t('Change DNS records'),
       ),
