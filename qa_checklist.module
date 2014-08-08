@@ -348,7 +348,7 @@ function qa_checklist_checklistapi_checklist_info() {
     // Launch
     'launch' => array(
       '#title' => t('Site launch'),
-      '#description' => t('<p>Now you're ready to launch.</p>'),
+      '#description' => t("<p>Now you're ready to launch.</p>"),
       
       'set_up_settings_php_redirect' => array(
         '#title' => t('Change DNS records'),
